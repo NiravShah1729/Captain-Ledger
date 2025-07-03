@@ -131,6 +131,31 @@ const loginUser = asyncHandler(async (req, res) => {
     );
 });
 
+const logoutUser = asyncHandler(async (req, res) => {
+  await User.findByIdAndUpdate(
+    req.user._id,
+    {
+      $unset: {
+        refreshToken: 1,
+      },
+    },
+    {
+      new: true,
+    }
+  );
+
+  const options = {
+    httpOnly: true,
+    secure: true,
+  };
+
+  return res
+    .status(200)
+    .clearCookie("accessToken", options)
+    .clearCookie("refreshToken", options)
+    .json(new apiResponse(200, {}, "User looged out"));
+});
+
 const getMyProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id).select("-password");
 
@@ -142,4 +167,9 @@ const getMyProfile = asyncHandler(async (req, res) => {
     .json(new apiResponse(200, user, "User profile fetched successfully"));
 });
 
-export { registerUser, loginUser, getMyProfile };
+export { 
+    registerUser,
+    loginUser,
+    logoutUser,
+    getMyProfile 
+};

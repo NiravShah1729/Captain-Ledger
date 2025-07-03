@@ -20,6 +20,8 @@ app.use(cookieParser());
 
 //routes imports
 import userRoutes from "./routes/user.routes.js"
+import transactionRouter from "./routes/transaction.routes.js"
 
+app.use("/api/v1/transaction", transactionRouter);
 app.use("/api/v1/users",userRoutes)
 export default app;
