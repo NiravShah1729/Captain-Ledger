@@ -24,10 +24,13 @@ import transactionRoutes from "./routes/transaction.routes.js"
 import postRoutes from "./routes/post.routes.js"
 import missionRoutes from "./routes/mission.routes.js"
 import feedbackRoutes from "./routes/feedback.routes.js"
+import attendenceRoutes from "./routes/attendence.routes.js"
 
 app.use("/api/v1/transaction", transactionRoutes);
 app.use("/api/v1/users",userRoutes)
 app.use("/api/v1/posts",postRoutes)
 app.use("/api/v1/missions", missionRoutes);
 app.use("/api/v1/feedbacks",feedbackRoutes)
+app.use("/api/v1/attendence",attendenceRoutes);
+
 export default app;
