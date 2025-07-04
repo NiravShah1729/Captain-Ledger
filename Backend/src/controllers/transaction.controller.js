@@ -35,7 +35,6 @@ const createTransaction = asyncHandler(async(req,res) => {
 })
 
 //get all transactions for the current user
-
 const getUserTransactions = asyncHandler(async(req,res) => {
     const transaction = await Transactions.find({
       $or: [{ from: req.user._id }, { to: req.user._id }],
@@ -51,7 +50,6 @@ const getUserTransactions = asyncHandler(async(req,res) => {
 })
 
 //get all transactions(admins)
-
 const getAllTransactions = asyncHandler(async(req,res) => {
     if(req.user.role !== "admin"){
         throw new apiError(403, "Only admins can access all transactions");

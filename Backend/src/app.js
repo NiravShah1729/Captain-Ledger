@@ -20,10 +20,12 @@ app.use(cookieParser());
 
 //routes imports
 import userRoutes from "./routes/user.routes.js"
-import transactionRouter from "./routes/transaction.routes.js"
-import postRouter from "./routes/post.routes.js"
+import transactionRoutes from "./routes/transaction.routes.js"
+import postRoutes from "./routes/post.routes.js"
+import missionRoutes from "./routes/mission.routes.js"
 
-app.use("/api/v1/transaction", transactionRouter);
+app.use("/api/v1/transaction", transactionRoutes);
 app.use("/api/v1/users",userRoutes)
-app.use("/api/v1/posts",postRouter)
+app.use("/api/v1/posts",postRoutes)
+app.use("/api/v1/missions", missionRoutes);
 export default app;
