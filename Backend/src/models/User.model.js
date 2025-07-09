@@ -47,7 +47,7 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-// ✅ Generate Access Token
+//Generate Access Token
 userSchema.methods.generateAccessToken = function () {
   return jwt.sign(
     {
@@ -60,7 +60,7 @@ userSchema.methods.generateAccessToken = function () {
   );
 };
 
-// ✅ Generate Refresh Token
+//Generate Refresh Token
 userSchema.methods.generateRefreshToken = function () {
   return jwt.sign(
     {
