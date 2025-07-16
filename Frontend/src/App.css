@@ -1,0 +1,38 @@
+/* Marvel Theme */
+.marvel-app {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.marvel-button {
+  background: #ED1D24 !important;
+  color: white !important;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.marvel-button:hover {
+  background: #ff3838 !important;
+}
+
+/* Comic-style underline for links */
+.marvel-link {
+  position: relative;
+}
+
+.marvel-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #ED1D24;
+  transition: width 0.3s;
+}
+
+.marvel-link:hover:after {
+  width: 100%;
+}
