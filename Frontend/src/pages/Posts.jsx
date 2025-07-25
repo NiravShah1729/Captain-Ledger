@@ -329,9 +329,11 @@ function PostsPage() {
       <div className="min-h-screen bg-gradient-to-br from-[#2E2E2E] to-[#202020] font-['Bebas_Neue'] text-white font-smoothing-auto flex flex-col">
         {/* Header Section */}
         <Navbar
-          currentUserName={currentUserName}
-          showNavbar={showNavbar}
-          activeTab="POSTS"
+          currentUserName={currentUserName || "GUEST"}
+          showNavbar={true}
+          isLoggedIn={true}
+          isAdmin={true}
+          onNavAttempt={() => {}}
         />
         {/* Padding to prevent content from being hidden by fixed header */}
         <div className="pt-[133px]"></div>{" "}
