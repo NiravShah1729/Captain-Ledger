@@ -3,6 +3,9 @@ import Home from "./pages/Home";
 import PostPage from "./pages/Posts";
 import Mission from "./pages/Mission";
 import HeroPage from "./pages/Heros";
+import Attendance from "./pages/Attendance";
+import MoneyTransfer from "./pages/MoneyTransfer";
+import Feedback from "./pages/Feedback";
 import "./App.css";
 
 export default function App() {
@@ -13,7 +16,9 @@ export default function App() {
         <Route path="/posts" element={<PostPage />} />
         <Route path="/missions" element={<Mission />} />
         <Route path="/heroes" element={<HeroPage />} />
-        
+        <Route path="/attendence" element={<Attendance />} />
+        <Route path="/transactions" element={<MoneyTransfer />} />
+        <Route path="/feedback" element={<Feedback />} />
       </Routes>
     </div>
   );
