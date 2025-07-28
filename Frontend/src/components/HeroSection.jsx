@@ -33,7 +33,7 @@ const heroes = [
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full text-white bg-background font-bebas">
+    <section className="relative w-full text-white bg-[#FFFFFF] font-bebas">
       {/* Avengers Video */}
       <div className="w-full h-[600px] overflow-hidden">
         <video
@@ -48,7 +48,7 @@ const HeroSection = () => {
 
       {/* Hero Card Container */}
       <div className="w-full flex justify-center relative z-10">
-        <div className="w-[1117px] h-[530px] bg-card -mt-[60px] flex px-[101.5px] gap-[18px] items-center shadow-2xl rounded-md">
+        <div className="w-[1117px] h-[530px] bg-[#FFFFFF] -mt-[60px] flex px-[101.5px] gap-[18px] items-center shadow-2xl rounded-md">
           {heroes.map((hero, idx) => (
             <div
               key={idx}
